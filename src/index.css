@@ -8,6 +8,8 @@ body {
 	padding: 10px;
 	background-color: firebrick;
 	color: #fff;
+	display: flex;
+	justify-content: center;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -20,6 +22,14 @@ body {
 	padding: 0;
 	margin: 0;
 	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.header-icon {
+	width: 2em;
+	height: 2em;
+	margin-right: 13px;
 }
 
 .map {
@@ -31,6 +41,10 @@ body {
 .location-icon {
 	font-size: 2rem;
 	color: red;
+}
+
+.location-icon:hover {
+	cursor: pointer;
 }
 
 .loader {
@@ -69,4 +83,22 @@ body {
 
 .location-info li {
 	padding: 5px 0;
+}
+
+.volcano-icon {
+	width: 2em;
+	height: 2em;
+}
+
+.volcano-icon:hover {
+	cursor: pointer;
+}
+
+.cyclone-icon {
+	width: 2em;
+	height: 2em;
+}
+
+.cyclone-icon:hover {
+	cursor: pointer;
 }
