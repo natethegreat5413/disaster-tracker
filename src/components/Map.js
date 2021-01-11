@@ -17,7 +17,7 @@ const Map = ({ eventData, center, zoom }) => {
 					onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
 				/>
 			);
-		} else if (ev.categories[0].id === 12) {
+		} else if (ev.categories[0].id === 12 && ev.id !== 'EONET_354') {
 			return (
 				<VolcanoLocationMarker
 					key={index}
