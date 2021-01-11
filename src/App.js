@@ -14,6 +14,7 @@ function App() {
 			const { events } = await res.json();
 
 			setEventData(events);
+			console.log(events);
 			setLoading(false);
 		};
 
