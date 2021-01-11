@@ -6,6 +6,7 @@ const Header = () => {
 		<header className="header">
 			<h1>
 				<Icon icon={carEmergency} className="header-icon" /> Disaster Tracker
+				<Icon icon={carEmergency} className="header-icon" />
 			</h1>
 		</header>
 	);
