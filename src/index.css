@@ -6,7 +6,7 @@ body {
 
 .header {
 	padding: 10px;
-	background-color: firebrick;
+	background-color: rgb(179, 29, 29);
 	color: #fff;
 	display: flex;
 	justify-content: center;
