@@ -110,3 +110,20 @@ body {
 	filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
 	transition: 0.1s ease-in-out;
 }
+
+.iceberg {
+	width: 1em;
+	height: 1em;
+	border-radius: 75px;
+}
+
+.iceberg:hover {
+	cursor: pointer;
+	-webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+	filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+	transition: 0.1s ease-in-out;
+}
+
+.gone {
+	color: transparent;
+}

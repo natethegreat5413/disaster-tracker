@@ -4,6 +4,7 @@ import LocationMarker from './LocationMarker';
 import VolcanoLocationMarker from './VolcanoLocationMarker';
 import LocationInfoBox from './LocationInfoBox';
 import SevereStormsMarker from './SevereStormsMarker';
+import IcebergLocationMarker from './IcebergLocationMarker';
 
 const Map = ({ eventData, center, zoom }) => {
 	const [locationInfo, setLocationInfo] = useState(null);
@@ -14,7 +15,7 @@ const Map = ({ eventData, center, zoom }) => {
 					key={index}
 					lat={ev.geometries[0].coordinates[1]}
 					lng={ev.geometries[0].coordinates[0]}
-					onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+					onClick={() => setLocationInfo({ id: ev.id, title: ev.title, description: ev.description })}
 				/>
 			);
 		} else if (ev.categories[0].id === 12 && ev.id !== 'EONET_354') {
@@ -23,7 +24,7 @@ const Map = ({ eventData, center, zoom }) => {
 					key={index}
 					lat={ev.geometries[0].coordinates[1]}
 					lng={ev.geometries[0].coordinates[0]}
-					onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+					onClick={() => setLocationInfo({ id: ev.id, title: ev.title, description: ev.description })}
 				/>
 			);
 		} else if (ev.categories[0].id === 10) {
@@ -32,7 +33,16 @@ const Map = ({ eventData, center, zoom }) => {
 					key={index}
 					lat={ev.geometries[0].coordinates[1]}
 					lng={ev.geometries[0].coordinates[0]}
-					onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+					onClick={() => setLocationInfo({ id: ev.id, title: ev.title, description: ev.description })}
+				/>
+			);
+		} else if (ev.categories[0].id === 15) {
+			return (
+				<IcebergLocationMarker
+					key={index}
+					lat={ev.geometries[0].coordinates[1]}
+					lng={ev.geometries[0].coordinates[0]}
+					onClick={() => setLocationInfo({ id: ev.id, title: ev.title, description: ev.description })}
 				/>
 			);
 		} else {

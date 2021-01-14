@@ -1,4 +1,5 @@
 const LocationInfoBox = ({ info }) => {
+	console.log('info', info);
 	return (
 		<div className="location-info">
 			<h2>Event Location Info</h2>
@@ -8,6 +9,13 @@ const LocationInfoBox = ({ info }) => {
 				</li>
 				<li>
 					Title: <strong>{info.title}</strong>
+				</li>
+				<li>
+					{info.description !== '' ? (
+						<>
+							Description: <strong>{info.description}</strong>
+						</>
+					) : null}
 				</li>
 			</ul>
 		</div>
